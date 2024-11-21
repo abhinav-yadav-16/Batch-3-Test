@@ -1,13 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head>git
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <title>LeetCode Leaderboard</title>
+    <style>
+        body {
+          padding: 25px;
+          background-color: white;
+          color: black;
+          font-size: 25px;
+        }
+        .button{
+            border: 1px;
+            border-color: rgb(251, 253, 253);
+
+        }
+        
+        .dark-mode {
+          background-color: black;
+          color: white;
+        }
+        body {
+    font-family: Arial, sans-serif;
+}
+
+.ticker-wrap {
+    width: 100%;
+    overflow: hidden;
+    background-color: #333;
+    color: #fff;
+}
+
+.ticker {
+    display: flex;
+    width: 100%;
+    animation: ticker 10s linear infinite;
+}
+
+.ticker__item {
+    flex: 0 0 auto;
+    padding: 10px;
+    white-space: nowrap;
+    margin-right: 100px;
+}
+
+@keyframes ticker {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+        </style>
 </head>
 <body class="bg-gray-900 text-white p-5">
+    <h2>Toggle Dark/Light Mode</h2>
+<p>Click the button to toggle between dark and light mode for this page.</p>
+
+<button onclick="myFunction()">Light/Dark mode</button>
+
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+</script>
+<div class="ticker-wrap">
+    <div class="ticker">
+        <div class="ticker__item">2215001289: Prashant Pathak</div>
+        <div class="ticker__item">2215000064: Divayansh Singh</div>
+        <div class="ticker__item">2215001079: Mohd Asad Ansari</div>
+    </div>
+</div>
     <!-- <canvas id="myChart" style="width:100%;max-width:600px"></canvas> -->
     <div class="container mx-auto my-10">
         <div class="">
